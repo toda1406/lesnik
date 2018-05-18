@@ -1,0 +1,312 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27.04.2018., 17.12.23
+    Author     : toda
+*/
+body{
+    margin: 0;
+    padding: 0;
+    background-image:URL(../images/slika8.png) ;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+    color:#333;
+}
+h1,h2,h3,h4{
+    margin: 0.5em 0 0.4em;
+}
+
+h1{font-size: 38px;}/*podesavanje svih nasslova*/
+h2{font-size:28px;}
+h1{font-size: 26px;}
+h1{font-size:24px;}
+
+a:link,
+a:visited{
+    color:#009999;
+    text-decoration: none;    
+}
+a:hover{
+    color:#ff3333;
+    text-decoration: underline;
+}
+a:active{
+    color:#555;
+}
+
+img{
+    vertical-align: bottom;
+    max-width: 100%;
+}
+#wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #FFF;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);/*senka na wrapperu */
+}
+#header{
+    margin-top: 5px;
+    background: #FFF;
+    overflow: hidden; /*-- mozemo staviti hederu zato sto navigacija nece imati padajuci meni */
+    border-bottom: 5px solid #339900;
+}
+#logo{
+    float: left;
+}
+#nav{
+   float: left; 
+}
+#nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#nav ul li{
+    float: left;
+    font-size:25px;
+}
+#nav ul li a{
+    display: block;
+    padding: 40px 15px;
+    height: 10px;    
+}
+#nav ul li a:link,
+#nav ul li a:visited{
+    color:#006633;
+    text-decoration: none;
+}
+#nav ul li a:hover{
+    color:#ff9900;/*ako hocemo plocicu treba ovde postaviti background-color*/
+}
+#nav ul li a:active{
+    background-color:#cc6600;
+}
+#front{
+   position: relative;/*roditeljski element za h2 naslov*/
+}
+#front h2{
+    position:absolute;/*pozicioniranje naslova h2 na  slici*/
+    right: 20px;     /*moze se postaviti i slika ili logo na slici */
+    bottom: 20px;
+    color: #FFF;
+    font-size: 4em;
+}
+#main{
+    float:left;
+    width: 840px;
+    padding:15px;
+    
+}
+#sidebar{
+    float:right;
+    width: 300px;
+    padding: 15px;
+ 
+}
+.block{
+    overflow: hidden;/*svakom block elementu resavamo float*/
+}
+.block h2{
+    color:#006633;
+}
+#main .block  h2{
+    border-bottom: 2px solid #339900;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+#sidebar .block  h2{
+    border-bottom: 2px solid #339900;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+#intro img{
+    float: right;
+}
+#intro .introText{
+    padding-right: 300px;
+    text-align: justify;
+}
+.article{
+    float:left;
+    width: 410px;
+    margin-right: 20px;
+}
+.article:nth-of-type(2n){/*gadja svaki drugi articl*/
+  margin-right: 0;  
+}
+.article img{
+    float:left;
+    margin: 8px 14px 2px 0;/*gornja margina je 2px , spustili smo sliku dole*/
+}
+.article p {
+    margin-top: 0;/*prvi red paragrafa da bude u ravni sa img*/ 
+     text-align: justify;
+}
+.article h3{
+    text-transform: uppercase;
+    color: #006633;
+}
+.kontakt p{
+     text-align: justify;
+}
+#tags ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#tags ul li{
+    float:left;
+}
+#tags ul li a{
+    display: block;
+    padding: 10px;
+    margin: 0 5px 5px 0;
+}
+#tags ul li a:link,
+#tags ul li a:visited{
+    background-color: #339900;
+    color: #FFF;
+    text-decoration: none;
+}
+#tags ul li a:hover{
+    background-color: #993300;
+}
+#tags ul li a:active{
+    background-color:#ff9900;
+}
+.reklama{
+    margin-top: 55px;
+}
+
+#footer{
+    clear: both;
+    text-align: center;
+    border-top: 5px solid #339900;
+    padding: 10px;
+}
+footer p {
+    margin: 0;
+}
+
+/*media upiti ---responsive*/
+
+/*manji ekrani racunara*/
+@media screen and (min-width:1024px) and (max-width:1260px){
+    #wrapper{
+        width:960px;
+        background-color: red;
+    }
+    #main{
+        width: 600px;
+    }
+    #sidebar{
+        width: 300px;
+    }
+    .article{
+        width: 290px;
+        margin-right: 20px;
+    }
+    #intro img{
+          width:200px;
+        }
+       #intro .introText{
+            padding-right:0px;
+            text-align: justify;
+        }
+}
+/*tableti*/
+@media screen and (min-width:768px) and (max-width:1023px){
+    #wrapper{
+        width: 700px;
+        background-color: yellow;
+        }
+        #logo{
+            float: none;
+            text-align: center;
+        }
+        #nav{
+            float:none;
+            text-align: center;
+        }
+        #nav ul li{
+            float:none;
+            display: inline-block/*li nisu floutovani ali su opet u prikazu jedan pored drugoga*/
+        }                        /*obicni floutovani elementi se ne mogu centrirati pomocu text align*/
+       
+        #main{
+            width: 420px;
+            padding: 10px;
+        }
+        #sidebar{
+            width: 240px;
+            padding: 10px; 
+        }
+        #intro img{
+          width:200px;
+        }
+       #intro .introText{
+            padding-right:0px;
+            text-align: justify;
+        }
+        .article{
+            float:none;
+            width:auto;
+            margin-right: 0;
+            overflow: hidden;
+            
+        }
+    }  
+
+/*mobilni telefoni i manji tableti*/
+@media screen and (max-width:767px){
+    #wrapper{
+        width: 80%;
+        background-color: blue;
+    }
+     #logo{
+            float: none;
+            text-align: center;
+        }
+        #nav{
+            float:none;
+            text-align: center;
+        }
+        #nav ul li{
+            float:none;    
+        }  
+        #main,
+        #sidebar{
+            float:none;
+            width: auto;
+            padding: 10px;
+        }
+       #intro img{
+       float: none;
+       padding-right: 0;
+        }
+       #intro .introText{
+            padding-right:0px;
+            text-align: justify;
+        } 
+         .article{
+            float:none;
+            width:auto;
+            margin-right: 0;
+            overflow: hidden;
+            
+        }
+        #nav ul li a:hover{
+        background-color:#ff9900;
+        }
+        #nav ul li a:link,
+        #nav ul li a:visited{
+            color:#006633;
+            text-decoration: none;
+        }
+        #front h2{
+            font-size:3em;
+        }
+}
