@@ -197,7 +197,7 @@ footer p {
 @media screen and (min-width:1024px) and (max-width:1260px){
     #wrapper{
         width:960px;
-        background-color: red;
+     
     }
     #main{
         width: 600px;
@@ -221,7 +221,7 @@ footer p {
 @media screen and (min-width:768px) and (max-width:1023px){
     #wrapper{
         width: 700px;
-        background-color: yellow;
+     
         }
         #logo{
             float: none;
@@ -264,7 +264,7 @@ footer p {
 @media screen and (max-width:767px){
     #wrapper{
         width: 80%;
-        background-color: blue;
+       
     }
      #logo{
             float: none;
